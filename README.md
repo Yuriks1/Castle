@@ -9,7 +9,7 @@ How to use :
     docker network create castle
  ```
 ```
-    docker run -d --name mongodb --network castle -v castle:/data/db -p 27017:27017 mongo
+    docker run -d --name castle --network castle -v castle:/data/db -p 27017:27017 mongo
    ```
 
 ```
