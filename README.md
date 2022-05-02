@@ -13,9 +13,5 @@ How to use :
    ```
 
 ```
-   ./mvnw package -Dpackaging=docker-native -Pgraalvm   
- ```
-
-```
-    docker run -d --network castle --name <app-container-name> -p 8080:8080 mongomicronaut:latest
+   ./mvnw package -Dpackaging=docker-native
  ```
