@@ -1,25 +1,21 @@
-## Micronaut 3.4.3 Documentation
+##  Castle Native Application Using MongoDB
 
-- [User Guide](https://docs.micronaut.io/3.4.3/guide/index.html)
-- [API Reference](https://docs.micronaut.io/3.4.3/api/index.html)
-- [Configuration Reference](https://docs.micronaut.io/3.4.3/guide/configurationreference.html)
-- [Micronaut Guides](https://guides.micronaut.io/index.html)
----
+How to use :
 
-## Feature mongo-sync documentation
+```
+    docker volume create castle
+   ```
+```
+    docker network create castle
+ ```
+```
+    docker run -d --name mongodb --network castle -v castle:/data/db -p 27017:27017 mongo
+   ```
 
-- [Micronaut MongoDB Synchronous Driver documentation](https://micronaut-projects.github.io/micronaut-mongodb/latest/guide/index.html)
+```
+   ./mvnw package -Dpackaging=docker-native -Pgraalvm   
+ ```
 
-- [https://docs.mongodb.com](https://docs.mongodb.com)
-
-
-## Feature http-client documentation
-
-- [Micronaut HTTP Client documentation](https://docs.micronaut.io/latest/guide/index.html#httpClient)
-
-
-## Feature testcontainers documentation
-
-- [https://www.testcontainers.org/](https://www.testcontainers.org/)
-
-
+```
+    docker run -d --network castle --name <app-container-name> -p 8080:8080 mongomicronaut:latest
+ ```
