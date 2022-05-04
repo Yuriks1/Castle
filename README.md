@@ -1,6 +1,14 @@
 ##  Castle Native Application Using MongoDB
 
+POST http://localhost:8080/castles
+```
+{ "name" : "Windsor", "location" : "Great Britain" }
+```
+GET http://localhost:8080/castles
+
 How to use :
+
+
 
 ```
 docker volume create castle
